@@ -1,11 +1,11 @@
 class Ser_vivo():
 
 
-	def__init__(self,vida,h2o,carbono):
+	def __init__(self,vida,h2o,carbono):
 
-		self.vida=True
-		self.h2o=True
-		self.carbono=True
+		self.vida=vida
+		self.h2o=h2o
+		self.carbono=carbono
 
 
 	def alimentacion(self):
@@ -18,26 +18,26 @@ class Ser_vivo():
 
 class Mamíferos(Ser_vivo):
 
-	def__init__(self,extremidades,columna_vertebral):
+	def __init__(self,extremidades,columna_vertebral):
 
-		self.extremidades=4
-		self.columna_vertebral=True
+		self.extremidades=extremidades
+		self.columna_vertebral=columna_vertebral
 
 	def movilidad(self):
 		print("Puedo desplazarme")
 
 
 
-class Persona(Ser_vivo,Mamíferos):
+class Persona(Mamíferos):
 
 	def pensar(self):
 		print("Hago uso de la razón")	
 
 
-
-niño=Persona()
+niño=Persona(4,1)
 
 print(niño.extremidades)
+
 
 
 
